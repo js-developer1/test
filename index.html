@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rebeccapurple;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vel architecto, ratione animi iste tempore? Iure tenetur praesentium nesciunt quod suscipit nobis doloribus. Voluptate esse ducimus quae? Hic, corporis voluptatibus.</section>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem expedita quidem aut commodi nesciunt perspiciatis, vitae libero in, pariatur facilis asperiores quibusdam magnam perferendis dolorum aperiam culpa voluptates repellendus eum!</section>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, architecto excepturi. Beatae, repellendus doloremque. Error tempora repellat pariatur animi ullam eum quod obcaecati cumque, alias harum tempore modi, nesciunt dolorem.</section>
+    <section>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nam reiciendis laboriosam tempore. Quo voluptas blanditiis rerum sit. Minima dolorum qui facere non exercitationem necessitatibus, quo perspiciatis excepturi impedit ex.</section>
+    <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio deserunt iste autem architecto omnis ab vero accusamus commodi debitis, delectus perspiciatis voluptate! Omnis numquam optio cumque, ea culpa nam tempora.</section>
+    <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias mollitia, nam perferendis asperiores amet similique veritatis. Aut adipisci cumque qui dolorum voluptate quasi commodi rerum. Praesentium fugit commodi sit aliquid?</section>
+    <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus atque dolor quisquam laudantium laborum totam recusandae, voluptas voluptatum eveniet perferendis provident vitae aspernatur dolorum quae nostrum possimus fugiat laboriosam deleniti?</section>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolor nulla minus ab modi mollitia ullam rem dolorem eius laborum vero sed unde maiores a in consequatur sapiente, alias optio.</section>
+    <div id="change"></div>
+    <script>
+        const change = document.getElementById("change");
+        const words = ["time", "apple", "great", "role", "loser"];
+
+        const timer = setInterval(changeWord, 100)
+
+        function random(min, max) {
+            let num = Math.round((Math.random() * max) % max)
+            if (num < min) num = min
+            if (num > max) num = max
+            return num
+        }
+
+        function changeWord() {
+            const index = random(0, words.length)
+            change.innerText = words[index]
+        }
+    </script>
+</body>
+</html>
